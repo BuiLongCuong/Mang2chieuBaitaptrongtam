@@ -113,15 +113,15 @@ let c=[];
 <p id="kq"></p>
 <script>
     function bai6() {
-        let a=["a","b","c","-","d","-","e","-","f"];
-        let b= a.join(" ");
-        for (let i = 0; i < a.length; i++) {
-            if(a[i]==="-"){
-                a[i]="_";
+        let a="Bùi-Long-Cường";
+        let b= a.split('');//Biến chuỗi thành mảng
+        for (let i = 0; i < b.length; i++) {
+            if(b[i]==="-"){
+                b.splice(i, 1,"_")
             }
         }
-        b+="<br>"+a.join(" ")
-        document.getElementById("kq").innerHTML= b
+        a=b.join('')
+        document.getElementById("kq").innerHTML= a
     }
 </script>
 </body>
