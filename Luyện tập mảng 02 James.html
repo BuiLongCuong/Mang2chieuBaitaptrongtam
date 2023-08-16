@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<b>Bài 1: Viết chương trình khởi tạo mảng 2 chiều, gồm một bộ các phần tử có sẵn, in ra các phần tử trong mảng.</b>
+<br>
+<button onclick="bai1()">In</button>
+<script>
+    function bai1() {
+        let a = [
+            [1, 2, 1, 24],
+            [8, 11, 9, 4],
+            [7, 0, 7, 27],
+            [7, 4, 28, 14],
+            [3, 10, 26, 7]
+        ];
+        for (let i = 0; i < a.length; i++) {
+            document.write(`Dòng ${i} có các phần tử <br>`)
+            for (let j = 0; j < a[i].length; j++) {
+                document.write(`${a[i][j]}  <br>`)
+            }
+        }
+    }
+</script>
+<br>
+<b>Bài 2: Viết một chương trình để in các ký tự trong một mảng theo thứ tự đảo ngược. Ví dụ, nếu một mảng chứa các ký tự  [ 'c', 's', 'c', '2', '6', '1' ] sau khi thực hiện đảo ngược sẽ là "162csc"</b>
+<br>
+<button onclick="bai2()">In</button>
+<script>
+    function bai2() {
+        let a = [
+            [1, 2, 1, 24],
+            [8, 11, 9, 4],
+            [7, 0, 7, 27],
+            [7, 4, 28, 14],
+            [3, 10, 26, 7]
+        ];
+        for (let i = 0; i < a.length ; i++) {
+                console.log(a[i].reverse())
+            }
+
+    //     for (let i = a.length -1; i >= 0 ; i--) {
+    //         console.log(a[i].reverse())
+    //     }
+    // }
+    }
+</script>
+<br>
+<b>Bài 3: Viết một chương trình khai báo một mảng ký tự và kích thước của mảng. Chương trình này đếm số ký tự số trong mảng. </b>
+<br>
+<button onclick="bai3()">Thực hiện</button>
+<script>
+    function bai3() {
+let arr=[];
+let a=[];
+let b=[];
+let c=[];
+        for (let i = 0; i <5; i++) {
+            a.push(+prompt("Nhập số cho mảng a:"))
+            b.push(+prompt("Nhập số cho mảng b:"))
+            c.push(+prompt("Nhập số cho mảng c:"))
+        }
+        arr.push(a,b,c)
+        console.log(a)
+        console.log(b)
+        console.log(c)
+        console.log(arr)
+        let count=0;
+        for (let j = 0; j <arr.length ; j++) {
+            for (let e = 0; e <arr[j].length ; e++) {
+                count+=1
+            }
+        }
+        console.log(count);
+    }
+</script>
+<br>
+<b>Bài 4: Viết một chương trình để đếm số từ trong một chuỗi</b>
+<br>
+<button onclick="bai4()">Thực hiện</button>
+<script>
+    function bai4() {
+        let arr="Bùi Long Cường"
+        let demsotu=arr.split(' ');
+        document.write(`Số kí tự trong chuỗi là : ${arr.length} <br>`)
+        document.write(`Số từ trong chuỗi là : ${demsotu.length}`)
+    }
+</script>
+<br>
+<b>Bài 5: Viết một chương trình nhập vào 2 chuỗi, sau đó kiểm tra xem hai chuỗi có giống nhau hay không.</b>
+<br>
+<button onclick="bai5()">Thực hiện</button>
+<script>
+    function bai5() {
+        let a="";
+        let b="";
+            a=prompt("Nhập chuỗi dữ liệu cho biến a: ")
+            b=prompt("Nhập chuỗi dữ liệu cho biến b: ")
+        if(a===b){
+            document.write("Giống nhau")
+        }else {
+            document.write("Khác nhau")
+        }
+    }
+</script>
+<br>
+<b>Bài 6: Viết chương trình nhập vào một mảng ký tự, tìm tất cả các ký tự trong mảng là (-) và thay thế các ký tự này bởi ký tự ( _ )</b>
+<br>
+<button onclick="bai6()">Thực hiện</button>
+<p id="kq"></p>
+<script>
+    function bai6() {
+        let a=["a","b","c","-","d","-","e","-","f"];
+        let b= a.join(" ");
+        for (let i = 0; i < a.length; i++) {
+            if(a[i]==="-"){
+                a[i]="_";
+            }
+        }
+        b+="<br>"+a.join(" ")
+        document.getElementById("kq").innerHTML= b
+    }
+</script>
+</body>
+</html>
