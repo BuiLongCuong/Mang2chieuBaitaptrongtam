@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Hoàn thành lý thuyết về mảng trên MindMap
-    Cho mảng :  let arr = [
+    Cho mảng : let arr = [
     [1, 3, 4],
     [3, 4, 5],
     [5, 5, 6]
@@ -15,20 +15,20 @@
 <br>
 <button onclick="bai1()">Tính</button>
 <script>
-function bai1() {
-    let arr = [
-        [1, 3, 4],
-        [3, 4, 5],
-        [5, 5, 6]
-    ]
-    let tinhtong=0;
-    for (let i = 0; i < arr.length; i++) {
-        for (let j = 0; j < arr[i].length ; j++) {
-            tinhtong+=arr[i][j];
+    function bai1() {
+        let arr = [
+            [1, 3, 4],
+            [3, 4, 5],
+            [5, 5, 6]
+        ]
+        let tinhtong = 0;
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                tinhtong += arr[i][j];
+            }
         }
+        document.write(`Tổng các phần tử trong mảng là : ${tinhtong}`);
     }
-    document.write(`Tổng các phần tử trong mảng là : ${tinhtong}`);
-}
 </script>
 <br>
 <b>Bài 2: In ra tổng các phần tử của từng hàng.</b>
@@ -41,11 +41,11 @@ function bai1() {
             [3, 4, 5],
             [5, 5, 6]
         ]
-        for (let i = 0; i < arr.length ; i++) {
-            let sum=0;
+        for (let i = 0; i < arr.length; i++) {
+            let sum = 0;
             document.write(`Hàng ${i}`)
             for (let j = 0; j < arr[i].length; j++) {
-                sum+=arr[i][j];
+                sum += arr[i][j];
             }
             document.write(` có tổng giá trị là ${sum} <br>`)
         }
@@ -64,7 +64,7 @@ function bai1() {
             [5, 5, 6]
         ]
         for (let i = 0; i < arr.length; i++) {
-            let max =arr[i][0]
+            let max = arr[i][0]
             document.write(` <br>Dòng ${i}`)
             for (let j = 0; j < arr[i].length; j++) {
                 if (arr[i][j] > max) {
@@ -73,6 +73,73 @@ function bai1() {
             }
             document.write(` có phần tử lớn nhất là ${max}`)
         }
+    }
+</script>
+<br>
+<b>Bài 6 (Nâng cao): Hiển thị tổng các phần tử của từng cột.</b>
+<br>
+<button onclick="bai6()">Hiển thị</button>
+<script>
+    function bai6() {
+        let arr = [
+            [1, 3, 4],
+            [3, 4, 5],
+            [5, 5, 6]
+        ];
+        for (let i = 0; i < arr.length; i++) {
+            let sum = 0;
+            document.write(`Cột ${i}`)
+            for (let j = 0; j < arr[i].length; j++) {
+                sum += arr[j][i];
+            }
+            document.write(` có tổng các phần tử là ${sum} <br>`)
+        }
+    }
+</script>
+<br>
+<b>Bài 7 (Nâng cao): Hiển thị phần tử lớn nhất của từng cột.</b>
+<br>
+<button onclick="bai7()">Hiển thị</button>
+<script>
+    function bai7() {
+        let arr = [
+            [1, 3, 4],
+            [3, 4, 5],
+            [5, 5, 6]
+        ];
+        for (let i = 0; i < arr.length; i++) {
+            document.write(` Cột ${i}`)
+            let max = arr[i][0]
+            for (let j = 0; j < arr[i].length; j++) {
+                if (arr[j][i] > max) {
+                    max = arr[j][i];
+                }
+            }
+            document.write(` có phần tử lớn nhất là ${max} <br>`)
+        }
+    }
+</script>
+<br>
+<b>Bài 8 (Nâng cao): Tìm max đường chéo chính của ma trận trên</b>
+<br>
+<button onclick="bai8()">Thực hiện</button>
+<script>
+    function bai8() {
+        let arr = [
+            [1, 3, 4, 9],
+            [3, 19, 5, 21],
+            [5, 5, 3, 6],
+            [1, 7, 9, 15]
+        ];
+        let maxcuaduongchinh="";
+        let max=[0][0]
+        for (let i = 0; i < arr.length; i++) {
+                if(arr[i][i]>max){
+                    max =arr[i][i]
+                }
+        }
+        maxcuaduongchinh+=max
+        document.write(maxcuaduongchinh)
     }
 </script>
 </body>
